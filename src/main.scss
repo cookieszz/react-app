@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+@mixin theme($color) {
+    transition: .5s;
+    @if $color == black {
+        background-color: #2B2B2B;
+        color: #D9D9D9;
+    }
+    @else if $color == white {
+        background-color: #D9D9D9;
+        color: #2B2B2B;
+    }
+    @else if $color == darkBlack {
+        background-color: #202020;
+        color: #959595;
+    }
+    @else if $color == darkWhite {
+        background-color: #959595;
+        color: #202020;
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.page-width {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.nav-bar {
+    background-color: #1A4780;
+    height: 60px;
+    width: 100%;
+    position: fixed;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    h1 {
+        margin: 0;
+        padding: 0;
+        font-size: 60px;
+        font-weight: 800;
+        font-family: 'Poppins', sans-serif;
+    }
+    p {
+        margin: 0;
+        padding: 0;
+        font-size: 25px;
+        font-style: italic;
+        font-weight: 800;
+        color: #1A4780;
+        font-family: 'Poppins', sans-serif;
+    }
+}
+.black-theme {
+    @include theme(black);
+    .information {
+        @include theme(darkBlack);
+    }
+    .nav-bar {
+        color: #D9D9D9;
+        transition: .5s;
+    }
+}
+.white-theme {
+    @include theme(white);
+    .information {
+        @include theme(darkWhite);
+    }
+    .nav-bar {
+        color: #0A090B;
+        transition: .5s;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        h1 {
+            font-size: 32px;
+        }
+        p {
+            font-size: 17px;
+        }
+    }
+}

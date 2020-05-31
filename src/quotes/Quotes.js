@@ -1,5 +1,5 @@
 import React from 'react';
-import '../quotes/styleQuotes.css'
+import '../quotes/styleQuotes.scss'
 
 class Quotes extends React.Component {
     constructor(props) {

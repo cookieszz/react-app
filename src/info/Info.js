@@ -1,5 +1,5 @@
 import React from 'react';
-import '../info/styleInfo.css'
+import '../info/styleInfo.scss'
 
 function Info(props) {
     return(

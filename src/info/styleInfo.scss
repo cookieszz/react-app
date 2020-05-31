@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+
+.info-text {
+    font-family: 'Noto Serif', serif;
+    height: 100vh;
+    font-size: 17px;
+    padding: 3px 0 0 20px;
+    line-height: 1em;
+    span {
+        font-style: italic;
+    }
+    hr {
+        border: 0;
+        height: 2px;
+        width: 190px;
+        margin-left: 0;
+        background-color: #1A4780;
+    }
+}
+@media (max-width: 480px) {
+    .info-text {
+        font-size: 14px;
+    }
+}
